@@ -46,7 +46,3 @@ sql/        schema.sql (struktur + data seed)
 user/       area dosen & mahasiswa (CRUD artikel sendiri)
 admin/      area admin (kelola semua konten)
 ```
-
-> **Catatan:** `BASE_URL` di `config/config.php` diset ke `/project_akhir`. Jika folder
-> diakses dengan nama lain, sesuaikan nilai tersebut.
-> Edit data anggota kelompok di bagian atas `members.php`.
