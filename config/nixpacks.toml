@@ -1,2 +1,2 @@
 [providers.php]
-extensions = ["pdo_mysql", "mysqli"]
+extensions = ["pdo_mysql", "mysqli"]:
