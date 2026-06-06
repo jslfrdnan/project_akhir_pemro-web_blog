@@ -2,11 +2,16 @@
 // Koneksi PDO ke MySQL. Satu file koneksi dipakai semua halaman.
 require_once __DIR__ . '/config.php';
 
-$host = getenv('DB_HOST') ?: '127.0.0.1';
-$port = getenv('DB_PORT') ?: '3306';
-$dbname = getenv('DB_DATABASE') ?: 'blog_unsrat';
-$username = getenv('DB_USERNAME') ?: 'root';
-$password = getenv('DB_PASSWORD') !== false ? getenv('DB_PASSWORD') : '';
+// Baca variabel DB_*; jika tidak ada, fallback ke variabel bawaan MySQL Railway
+// (MYSQLHOST, MYSQLPORT, dst); jika masih kosong, pakai default lokal XAMPP.
+$host = getenv('DB_HOST') ?: getenv('MYSQLHOST') ?: '127.0.0.1';
+$port = getenv('DB_PORT') ?: getenv('MYSQLPORT') ?: '3306';
+$dbname = getenv('DB_DATABASE') ?: getenv('MYSQLDATABASE') ?: 'blog_unsrat';
+$username = getenv('DB_USERNAME') ?: getenv('MYSQLUSER') ?: 'root';
+
+$password = getenv('DB_PASSWORD');
+if ($password === false) { $password = getenv('MYSQLPASSWORD'); }
+if ($password === false) { $password = ''; }
 
 $dsn = "mysql:host={$host};port={$port};dbname={$dbname};charset=utf8mb4";
 

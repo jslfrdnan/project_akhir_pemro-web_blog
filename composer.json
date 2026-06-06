@@ -1,0 +1,10 @@
+{
+    "name": "unsrat/project-akhir-blog",
+    "description": "Blog Unsrat - tugas akhir pemrograman web",
+    "require": {
+        "php": ">=8.1",
+        "ext-pdo": "*",
+        "ext-pdo_mysql": "*",
+        "ext-mysqli": "*"
+    }
+}
