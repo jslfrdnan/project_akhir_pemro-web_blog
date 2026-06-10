@@ -28,14 +28,6 @@ Dibangun dengan **HTML, CSS, JS, PHP, MySQL murni — tanpa framework/library ap
    ```
 4. Buka aplikasi: `http://localhost/project_akhir`
 
-## Akun Demo (password semua: `password123`)
-
-| Peran      | Email                      |
-|------------|----------------------------|
-| Admin      | admin@unsrat.ac.id         |
-| Dosen      | johannes@unsrat.ac.id      |
-| Mahasiswa  | arif@student.unsrat.ac.id  |
-
 ## Struktur
 
 ```
